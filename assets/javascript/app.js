@@ -42,7 +42,10 @@ function renderQuestion() {
     get("test_status").innerHTML = "Test completed";
     clearInterval(timer.timerInterval);
     $("#timer-display").hide();
+    $('#timer').html('60');
+  
     
+    test.innerHTML += "<button class='btn btn-primary btn-lg' onclick='resetGame()'>Play Again</button>";
     
     
     // resets the variable to allow users to restart the test
@@ -87,6 +90,21 @@ function checkAnswer() {
   renderQuestion();
 }
 
+function resetGame(){
+// reset variables to original values
+pos = 0;
+correct = 0;
+test, test_status, question, choice, choices, chA, chB, chC, chD;
+
+clearInterval(timer.timerInterval);
+// reset timer
+
+timer.setTimer(60);
+timer.startTimer();
+$("#timer-display").show();
+renderQuestion();
+}
+
 window.addEventListener("load", renderQuestion, false);
 
 
@@ -124,6 +142,8 @@ var timer = {
         test.innerHTML = "<h2>You got " + correct + " of " + questions.length + " questions correct</h2>";
         get("test_status").innerHTML = "Time's Up!";
         $("#timer-display").hide();
+        $('#timer').html('60');
+        test.innerHTML += "<button class='btn btn-primary btn-lg' onclick='resetGame()'>Play Again</button>";
 
       }
     }, 1000);
