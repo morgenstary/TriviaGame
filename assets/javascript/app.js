@@ -10,7 +10,19 @@ var questions = [
   ["How many legs does a lobster have?", "6", "10", "8", "2", "B"],
   ["What type of animal is a Flemish giant?", "A whale", "A cat", "A rabbit", "A dog", "C"],
   ["From which animal is mohair obtained?", "The angora goat", "The himalayan yak", "The scottish sheep", "The african fox", "A"],
-  ["What is the natural habitat of arboreal animals?", "In dark caves", "In hot and dry climates", "In the ocean", "In or amongst trees", "D"]
+  ["What is the natural habitat of arboreal animals?", "In dark caves", "In hot and dry climates", "In the ocean", "In or amongst trees", "D"],
+  ["Bees are found on every continent of earth except for one, which is it?", "Asia", "Africa", "Antarctica", "Oceania", "C"],
+  ["What is the largest type of ‘big cat’ in the world?", "The tiger", "The lion", "The liger", "The russian leopard", "A"],
+  ["What are female elephants called?", "Elephantess", "Heifer", "Whelps", "Cows", "D"],
+  ["What is the fastest land animal in the world?", "The cougar", "The cheetah", "The lynx", "The jaguar", "B"],
+  ["How many pairs of wings does a bee have?", "2", "1", "4", "3", "A"],
+  ["What type of animal is the largest primate in the world?", "The loris", "The elephant", "The gorilla", "The ape", "C"],
+  ["What is the most recognizable feature of a hedgehog’s appearance?", "Their small noses", "Their odor", "Their color and size", "Their spines of spiky hair", "D"],
+  ["What is the name of an adult female horse?", "A doe", "A mare", "A girl", "A buck", "B"],
+  ["What is the largest land animal in the world?", "The elephant", "The buffalo", "The mongolian bull", "The giant panda", "A"],
+  ["What is the tallest animal in the world?", "The giraffe", "The bear", "The bush elephant", "The moose", "A"],
+  ["How many legs does a spider have?", "6", "8", "12", "4", "B"],
+  ["The crocodile species is believed to have been around for how long?", "100 million years", "20 million years", "200 million years", "200 thousand years", "C"]
 ];
 
 $(document).ready(function () {
