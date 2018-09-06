@@ -5,6 +5,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Helvetica'
 }
 
 h1 {
@@ -15,6 +16,15 @@ h1 {
     letter-spacing: 6px;
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
+
+h1::first-letter{
+font-size: 125%;
+}
+
+#capT::first-letter{
+    font-size: 125%;
+}
+
 
 h3{
     font-family: 'Suez One', serif;
@@ -50,7 +60,7 @@ h3{
  
 
 #start{
-    margin: 75px 50px 75px 75px;
+    /* margin: 75px 50px 75px 75px; */
 	letter-spacing: 3px;
 }
 
@@ -58,6 +68,19 @@ h3{
     font-family: 'Suez One', serif;
     font-size: 1.2em;
 }
+
+/* Custom CSS */
+
+.swal-button {
+    
+    
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #3162D7;
+    font-size: 12px;
+    border: 1px solid #3162D7;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
 
 
 

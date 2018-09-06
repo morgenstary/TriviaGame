@@ -25,9 +25,6 @@ $(document).ready(function () {
     timer.setTimer(60);
     // start the 1 secound count down/
     timer.startTimer();
-
-    
-
   });
 });
 
@@ -43,17 +40,15 @@ function renderQuestion() {
     clearInterval(timer.timerInterval);
     $("#timer-display").hide();
     $('#timer').html('60');
-  
-    
     test.innerHTML += "<button class='btn btn-primary btn-lg' onclick='resetGame()'>Play Again</button>";
-    
-    
+
     // resets the variable to allow users to restart the test
     pos = 0;
     correct = 0;
     // stops rest of renderQuestion function running when test is completed
     return false;
   }
+
   get("test_status").innerHTML = "Question " + (pos + 1) + " of " + questions.length;
   question = questions[pos][0];
   chA = questions[pos][1];
@@ -67,42 +62,52 @@ function renderQuestion() {
   test.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br>";
   test.innerHTML += "<input type='radio' name='choices' value='D'> " + chD + "<br><br>";
   test.innerHTML += "<button class='btn btn-primary btn-lg' onclick='checkAnswer()'>Submit Answer</button>";
+
 }
-
-
 
 function checkAnswer() {
   // use getElementsByName because there's an array which it will loop through
   choices = document.getElementsByName("choices");
   for (var i = 0; i < choices.length; i++) {
+
     if (choices[i].checked) {
       choice = choices[i].value;
     }
   }
-  // checks if answer matches the correct choice
-  if (choice == questions[pos][5]) {
-    //each time there is a correct answer this value increases
+
+  // radio button validator
+
+  if (!$("input[type=radio]:checked").length > 0) {
+    pos--;
+    // alert("Please make a selection");
+    swal({
+      text: "Please make a selection!",
+      icon: "warning",
+    });
+  } else if (choice == questions[pos][5]) {
     correct++;
   }
+
   // changes position of which character user is on
   pos++;
+
   // then the renderQuestion function runs again to go to next question
   renderQuestion();
 }
 
-function resetGame(){
-// reset variables to original values
-pos = 0;
-correct = 0;
-test, test_status, question, choice, choices, chA, chB, chC, chD;
+function resetGame() {
+  // reset variables to original values
+  pos = 0;
+  correct = 0;
+  test, test_status, question, choice, choices, chA, chB, chC, chD;
 
-clearInterval(timer.timerInterval);
-// reset timer
+  clearInterval(timer.timerInterval);
+  // reset timer
 
-timer.setTimer(60);
-timer.startTimer();
-$("#timer-display").show();
-renderQuestion();
+  timer.setTimer(60);
+  timer.startTimer();
+  $("#timer-display").show();
+  renderQuestion();
 }
 
 window.addEventListener("load", renderQuestion, false);
