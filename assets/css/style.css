@@ -1,0 +1,94 @@
+/* // Background image */
+body {
+    background: url("../images/animals-background-1366x768.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Helvetica'
+}
+
+h1 {
+    font-family: 'Dinotiqua-Heavy';
+	color: #3162D7;
+	font-size: 5em;
+	margin: 0px 0px 75px 0px;
+    letter-spacing: 6px;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+h1::first-letter{
+font-size: 125%;
+}
+
+#capT::first-letter{
+    font-size: 125%;
+}
+
+
+h3{
+    font-family: 'Suez One', serif;
+    font-size: 1.2em;
+}
+
+.header {
+    font-family: 'Suez One', serif;
+    margin: 200px 0px 0px 0px;
+	padding: 0px 0px 75px 0px;
+	
+}
+
+
+
+.jumbotron {
+    margin: 200px 100px 75px 100px;
+    /* size: 50px 50px 50px 50px; */
+    background-color: orange;
+    
+}
+
+#test_status{
+    font-family: 'Suez One', serif;
+    font-size: 2.5em;
+}
+
+#test{
+    font-family: 'Suez One', serif;
+    font-size: 1.5em;
+}
+    
+ 
+
+#start{
+    /* margin: 75px 50px 75px 75px; */
+	letter-spacing: 3px;
+}
+
+#timer-display{
+    font-family: 'Suez One', serif;
+    font-size: 1.2em;
+}
+
+/* Custom CSS */
+
+.swal-button {
+    
+    
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #3162D7;
+    font-size: 12px;
+    border: 1px solid #3162D7;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+@font-face {
+    font-family: 'Dinotiqua-Heavy';
+    src:url('../css/webfonts_Dinotiqua-Heavy/Dinotiqua-Heavy.ttf.woff') format('woff'),
+        url('../css/webfonts_Dinotiqua-Heavy/Dinotiqua-Heavy.ttf.svg#Dinotiqua-Heavy') format('svg'),
+        url('../css/webfonts_Dinotiqua-Heavy/Dinotiqua-Heavy.ttf.eot'),
+        url('../css/webfonts_Dinotiqua-Heavy/Dinotiqua-Heavy.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
